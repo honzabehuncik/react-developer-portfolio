@@ -1,0 +1,42 @@
+/* Styly pro běžné obrazovky */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+    background: #1A1A1A;
+    margin-bottom: 0 !important;
+    border-radius: 53px;
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Responzivní styly pro menší obrazovky (např. tablety) */
+@media (max-width: 768px) {
+    .footer {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 1rem;
+    }
+}
+
+/* Responzivní styly pro ještě menší obrazovky (např. mobilní telefony) */
+@media (max-width: 576px) {
+    .footer {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(200%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

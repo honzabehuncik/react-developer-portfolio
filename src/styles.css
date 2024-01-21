@@ -1,0 +1,703 @@
+/* Resetování stylů */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Globální styly */
+body {
+  font-family: 'Overpass Mono', monospace !important;
+  background-color: #1E1E1E !important;
+  color: #ABB2BF !important;
+}
+
+
+/* Světlé téma */
+.light-theme {
+  color: #BD93F9 !important;
+}
+
+/* Tmavé téma */
+.dark-theme {
+  color: #ABB2BF !important;
+}
+
+.light-theme .navbar .logo-text {
+  color: #BD93F9;
+}
+
+.light-theme .navbar .links a {
+  color: #ABB2BF;
+}
+
+.light-theme .navbar .links a:not(.link-theme):hover {
+  color: #BD93F9 !important; /* Barva textu při hover efektu */
+  transition: color 0.5s ease;
+  cursor: pointer;
+}
+
+.light-theme .link-theme {
+  color: #BD93F9;
+  border: 2px solid #BD93F9;
+  border-radius: 10px; /* Radius rohů */
+  padding: 5px 20px; /* Horní a dolní padding 5px, levý a pravý padding 20px */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Přechod na background-color a color */
+}
+
+.light-theme .link-theme:hover {
+  background-color: #BD93F9; /* Barva backgroundu při najetí myší */
+  color: #1A1A1A !important; /* Barva textu při najetí myší */
+}
+
+.light-theme .hero-title {
+  color: #BD93F9;
+}
+
+.light-theme .hero-description {
+  color: #ABB2BF;
+}
+
+.light-theme .hero-description .highlighted_yellow {
+  color: #F1FA8C;
+}
+
+.light-theme .hero-description .highlighted_green {
+  color: #50FA7B;
+}
+
+.light-theme .hero-description .highlighted_purple {
+  color: #FF79C6;
+}
+
+.light-theme .aboutme-title {
+  color: #BD93F9;
+}
+
+.light-theme .skills-title {
+  color: #BD93F9;
+}
+
+.light-theme .progress {
+  height: 4px !important;
+  width: 0;
+  --bs-progress-bg: #BD93F9 !important;
+  background-size: 200% 100%;
+  animation: animGradient 2s linear infinite, fillProgress 2s ease-in-out forwards;
+}
+
+.light-theme .feedback-title {
+  color: #BD93F9;
+}
+
+.light-theme .feedback-description h3 {
+  color: #BD93F9;
+}
+
+.light-theme .portfolio-title {
+  color: #BD93F9;
+}
+
+.light-theme .card-title {
+  font-size: 1.5em !important;
+  font-weight: bolder;
+  color: #BD93F9 !important;
+}
+
+.light-theme .card-footer-text {
+  color: #ABB2BF;
+}
+
+.light-theme .card-footer-text a:hover {
+  color: #BD93F9;
+  transition: color 0.5s ease;
+}
+
+.light-theme .contact-title {
+  color: #BD93F9;
+}
+
+.light-theme .contact-sites a {
+  color: #BD93F9;
+}
+
+.light-theme .contact-sites a:hover {
+  color: #FF79C6;
+  transition: color 0.5s ease;
+}
+
+
+/* Původní styly pro body a ostatní globální styly */
+
+/* Kontejner pro efekt glassmorphismu */
+.background-effects {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Posunutí pod obsah stránky */
+  background-color: rgba(40, 44, 52, 0.4); /* Barva s průhledností pro efekt */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Vytvoření trojúhelníků pro svítící vzory s větším rozmazáním a "glow" efektem */
+.background-effects::before {
+  content: "";
+  position: absolute;
+  width: 200px; /* Velikost kolečka */
+  height: 200px; /* Velikost kolečka */
+  border-radius: 50%; /* Kruhový tvar */
+  opacity: 0.6; /* Průhlednost svítících koleček */
+  filter: blur(80px); /* Větší rozmazání */
+  box-shadow: 0 0 20px 10px #E06C75; /* "Glow" efekt */
+}
+
+.background-effects::before {
+  top: 50%; /* Umístění kolečka uprostřed vertikálně */
+  left: 80%; /* Umístění kolečka uprostřed horizontálně */
+  transform: translate(-50%, -50%); /* Posunutí kolečka zpět o polovinu jeho vlastní velikosti */
+  background: #E06C75; /* Barva kolečka */
+}
+
+
+.light {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.light-1 {
+  top: 300px;
+  right: 20vw;
+  width: 400px;
+  height: 400px;
+  background-color: #E06C75;
+  filter: blur(200px) opacity(0.5);
+  animation: flashing-1 10s infinite;
+}
+
+.light-2 {
+  top: 1200px;
+  right: 40vw;
+  width: 400px;
+  height: 400px;
+  background-color: #C678DD;
+  filter: blur(200px) opacity(0.5);
+  animation: flashing-1 10s infinite;
+}
+
+.light-3 {
+  top: 2100px;
+  right: 20vw;
+  width: 400px;
+  height: 400px;
+  background-color: #61AFEF;
+  filter: blur(200px) opacity(0.5);
+  animation: flashing-1 10s infinite;
+}
+
+.light-4 {
+  top: 3000px;
+  right: 40vw;
+  width: 400px;
+  height: 400px;
+  background-color: #E06C75;
+  filter: blur(200px) opacity(0.5);
+  animation: flashing-1 10s infinite;
+}
+
+/* Ostatní styly pro obsah stránky */
+.content {
+  position: relative;
+  z-index: 1; /* Posunutí nad kontejner s efektem */
+  /* Další styly podle potřeby */
+}
+
+
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-title {
+  font-size: 4.5em !important;
+  font-weight: bold !important;
+  margin-top: 20%;
+  color: #E06C75;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-description {
+  font-size: 1.8em !important;
+  text-align: left;
+  margin-bottom: 20%;
+  line-height: normal;
+}
+
+.highlighted {
+  color: #FFFFFF;
+}
+
+.highlighted_red {
+  color: #E06C75;
+}
+
+.highlighted_yellow {
+  color: #E5C07B;
+}
+
+.highlighted_green {
+  color: #98C379;
+}
+
+.highlighted_purple {
+  color: #C678DD;
+}
+
+.highlighted_blue {
+  color: #61AFEF;
+}
+
+.hero-image {
+  flex: 1;
+  border-radius: 53px;
+  /* image import */
+}
+
+.aboutme-title {
+  color: #E06C75;
+  font-weight: bold;
+  font-size: 3.4em;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 2%;
+}
+
+.aboutme-description {
+  width: 800px;
+  height: 271px;
+  flex-shrink: 0;
+  color: #ABB2BF;
+  font-size: 1.4em;
+  line-height: normal;
+}
+
+.skills-title {
+  color: #E06C75;
+  font-weight: bold;
+  font-size: 3.4em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.skills-description {
+  height: 271px;
+  font-size: 1.4em;
+  line-height: normal;
+}
+
+.skill-bar {
+  margin-top: 20px;
+}
+
+.skills {
+  height: 491px;
+}
+
+.skill {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.skill-name {
+  display: inline-block;
+  width: 80px;
+  color: #ABB2BF;
+  font-size: 1.4rem;
+}
+
+.skill-percent {
+  width: 80px;
+  color: #ABB2BF;
+  font-size: 1.4rem;
+  margin-left: 583px;
+  text-align: right;
+}
+
+.skill-progress {
+  width: 700px;
+  background-color: #1E1E1E;
+  position: relative;
+  border-radius: 0.375rem;
+}
+
+
+.progress {
+  height: 4px !important;
+  width: 0;
+  --bs-progress-bg: #E06C75 !important;
+  background-size: 200% 100%;
+  animation: animGradient 2s linear infinite, fillProgress 2s ease-in-out forwards;
+}
+
+
+@keyframes fillProgress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--skill-width, 0);
+  }
+}
+
+
+
+.feedback {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.feedback-title {
+  color: #E06C75;
+  font-weight: bold;
+  font-size: 3.4em;
+  margin-right: 20px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 2%;
+}
+
+/* Styly pro prvni feedback */
+.first-feedback {
+  display: flex;
+  align-items: center;
+}
+
+/* Styly pro sekci feedback */
+.feedback {
+  display: flex;
+  flex-direction: column; /* Uspořádání ve sloupci pro nadpis a obsah */
+  align-items: flex-start; /* Zarovnání obsahu vlevo */
+  margin-bottom: 20px;
+  text-align: left; /* Zarovnání textu vlevo */
+  height: 571px;
+}
+
+
+
+/* Styly pro prvni feedback */
+.first-feedback {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* Styly pro obrázek */
+.feedback-img {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 23px;
+  background-image: url("../public/typek.png");
+  background-color: lightgray;
+  background-size: cover;
+  background-position: center center;
+  margin-right: 20px; /* Vzdálenost mezi obrázkem a textem */
+  align-self: flex-start; /* Zarovnání obrázku k hornímu okraji */
+}
+
+/* Styly pro popisek */
+.feedback-description {
+  width: 800px;
+  font-size: 1.4em;
+  line-height: normal;
+  text-align: left; /* Zarovnání textu vlevo */
+}
+
+/* Styly pro nadpis a odstavec uvnitř popisku */
+.feedback-description h3 {
+  margin-top: 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #E06C75;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+  .gradient-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(225deg, #32C5FF 0%, #B620E0 51%, #F7B500 100%);
+    background-size: 200% 100%;
+    -webkit-animation: animateGradient 2s linear infinite;
+    -moz-animation: animateGradient 2s linear infinite;
+    -o-animation: animateGradient 2s linear infinite;
+    animation: animateGradient 2s linear infinite;
+  }
+
+  @keyframes animateGradient {
+    0% {
+      background-position: 0 50%
+    }
+
+    50% {
+      background-position: 100% 50%
+    }
+
+    100% {
+      background-position: 0 50%
+    }
+  }
+
+
+
+.portfolio-title {
+  color: #E06C75;
+  font-weight: bold;
+  font-size: 3.4em;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 2%;
+}
+
+.portfolio-description {
+  width: 800px;
+  height: 70px;
+  flex-shrink: 0;
+  color: #ABB2BF;
+  font-size: 1.4em;
+  line-height: normal;
+}
+
+.card {
+  border-radius: 53px 53px !important;
+  border: none !important;
+  margin-bottom: 30px;
+  background: none !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Zajištění, aby se obrázek nevysunul mimo rámeček karty */
+}
+
+.card-header {
+  padding: 0;
+  border: none;
+  border-radius: 53px 53px 0 0;
+  overflow: hidden;
+}
+
+.card img {
+  height: 250px;
+  width: 100%;
+  border-radius: 53px 53px 0 0;
+  object-fit: cover;
+}
+
+
+.card-body {
+  border-radius: 0 0 53px 53px !important;
+  background-color: #1A1A1A;
+  padding: 20px !important;
+}
+
+.card-title {
+  font-size: 1.5em !important;
+  font-weight: bolder !important;
+  color: #E06C75 !important;
+  margin-top: 5%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-text {
+  color: #FFFFFF;
+}
+
+.card-footer-text {
+  text-align: center;
+  height: 250px;
+  margin-top: 20px !important;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #ABB2BF;
+}
+
+.card-footer-text a:hover {
+  color: #E06C75;
+  transition: color 0.5s ease;
+}
+
+.badge {
+  border-radius: 53px !important;
+  border: 2px solid;
+  padding: 5px 15px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.badge-red {
+  color: #E06C75 !important;
+  border-color: #E06C75;
+}
+
+.badge-orange {
+  color: #D19A66 !important;
+  border-color: #D19A66;
+}
+
+.badge-yellow {
+  color: #E5C07B !important;
+  border-color: #E5C07B;
+}
+
+.badge-green {
+  color: #98C379 !important;
+  border-color: #98C379;
+}
+
+.badge-cyan {
+  color: #56B6C2 !important;
+  border-color: #56B6C2;
+}
+
+.badge-blue {
+  color: #61AFEF !important;
+  border-color: #61AFEF;
+}
+
+.badge-purple {
+  color: #C678DD !important;
+  border-color: #C678DD;
+}
+
+
+
+.contact {
+  height: 400px;
+}
+
+.contact-title {
+  color: #E06C75;
+  font-weight: bold;
+  font-size: 3.4em;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 2%;
+}
+
+.contact-description {
+  width: 800px;
+  flex-shrink: 0;
+  color: #ABB2BF;
+  font-size: 1.4em;
+  line-height: normal;
+  height: 70px;
+}
+
+.contact-sites {
+  width: 800px;
+  flex-shrink: 0;
+  color: #ABB2BF;
+  font-size: 1.4em;
+  line-height: normal;
+}
+
+.contact-sites a {
+  color: #E06C75;
+  text-decoration: none;
+}
+
+.contact-sites a:hover {
+  color: #f3384a;
+  transition: color 0.5s ease;
+}
+
+
+@media (max-width: 1200px) {
+  .hero-description {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    font-size: 1.3em !important;
+  }
+
+  .aboutme-description {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    font-size: 1.2em;
+  }
+
+  .feedback-description {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    font-size: 1.2em;
+  }
+
+  .skills-title {
+    margin-top: 30%;
+  }
+
+  .skill-name {
+    max-width: 100%;
+  }
+
+  .skill-percent {
+    margin-left: 80%;
+  }
+
+  .skill-progress {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .feedback-title {
+    margin-top: 40%;
+  }
+
+  .portfolio-title {
+    margin-top: 50%;
+  }
+
+  .card-footer-text {
+    height: 100%;
+  }
+
+  .portfolio-description {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    font-size: 1.2em;
+  }
+
+  .contact-title {
+    margin-top: 20%;
+  }
+
+  .contact-description {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    font-size: 1.2em;
+  }
+
+  .contact-sites {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    font-size: 1.0em;
+  }
+}
