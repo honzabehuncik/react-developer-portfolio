@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-import './../../styles.css';
+import '../../assets/styles/styles.css';
 import { projects } from '../../data';
 
 function Portfolio() {

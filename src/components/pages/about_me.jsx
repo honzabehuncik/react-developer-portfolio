@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './../../styles.css';
+import '../../assets/styles/styles.css';
 import { Container } from 'react-bootstrap';
-import { skills } from '../../data';
+import { skills, feedbacks } from '../../data';
 
 function AboutMe() {
     const [isDarkTheme] = useState(true); // Stav pro sledování aktuálního tématu
@@ -68,23 +68,20 @@ function AboutMe() {
                         </div>
                     </div>
                 </section>
-                <section className="feedback">
+            <section className="feedback">
+                <Container>
                     <h1 className="feedback-title">Reference</h1>
-                    <div className="first-feedback">
-                        <div className="feedback-img"/>
-                        <div className="feedback-description">
-                            <h3>John Doe</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum ligula, congue nec quam a, fermentum consectetur tortor.</p>
+                    {feedbacks.map((feedback, index) => (
+                        <div className="first-feedback feedback-item" key={index}>
+                            <div className="feedback-img" style={{ backgroundImage: `url(${feedback.image})` }} />
+                            <div className="feedback-description">
+                                <h3>{feedback.author}</h3>
+                                <p>{feedback.description}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="first-feedback">
-                        <div className="feedback-img"/>
-                        <div className="feedback-description">
-                            <h3>John Doe</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum ligula, congue nec quam a, fermentum consectetur tortor.</p>
-                        </div>
-                    </div>
-                </section>
+                    ))}
+                </Container>
+            </section>
             </Container>
         </div>
     );

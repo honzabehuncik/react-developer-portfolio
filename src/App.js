@@ -1,6 +1,5 @@
-import {useState, useRef } from "react";
-import './App.css';
-import './styles.css';
+import { useRef } from "react";
+import './assets/styles/styles.css';
 import NavigationMenu from "./components/navigation/navigation_menu";
 import Homepage from "./components/pages/homepage";
 import {Container} from "react-bootstrap";
@@ -11,6 +10,7 @@ import Contact from "./components/pages/contact";
 import Footer from "./components/footer/footer";
 import { motion } from "framer-motion";
 import AnimatedCursor from "react-animated-cursor";
+import "./assets/styles/styles.css";
 
 
 function App() {
@@ -25,42 +25,42 @@ function App() {
 
     return (
 
-    <div>
-        <div className="App">
-            <AnimatedCursor
-                innerSize={10}
-                outerSize={22}
-                color='224, 108, 117'
-                outerAlpha={0.2}
-                innerScale={0.7}
-                outerScale={5}
-                clickables={[
-                    'a',
-                    'input[type="text"]',
-                    'input[type="email"]',
-                    'input[type="number"]',
-                    'input[type="submit"]',
-                    'input[type="image"]',
-                    'label[for]',
-                    'select',
-                    'textarea',
-                    'button',
-                    '.link',
-                    {
-                        target: '.custom',
-                        options: {
-                            innerSize: 10,
-                            outerSize: 22,
-                            color: '224, 108, 117',
-                            outerAlpha: 0.3,
-                            innerScale: 0.7,
-                            outerScale: 5
+        <div>
+            <div className="App">
+                <AnimatedCursor
+                    innerSize={10}
+                    outerSize={22}
+                    color={`var(--cursor-color)`}
+                    outerAlpha={0.2}
+                    innerScale={0.7}
+                    outerScale={5}
+                    clickables={[
+                        'a',
+                        'input[type="text"]',
+                        'input[type="email"]',
+                        'input[type="number"]',
+                        'input[type="submit"]',
+                        'input[type="image"]',
+                        'label[for]',
+                        'select',
+                        'textarea',
+                        'button',
+                        '.link',
+                        {
+                            target: '.custom',
+                            options: {
+                                innerSize: 10,
+                                outerSize: 22,
+                                color: `var(--cursor-color)`,
+                                outerAlpha: 0.3,
+                                innerScale: 0.7,
+                                outerScale: 5
+                            }
                         }
-                    }
-                ]}
-            />
-        </div>
-        <Container>
+                    ]}
+                />
+            </div>
+    <Container>
 
                 <div className="light light-1"/>
                 <div className="light light-2"/>
@@ -70,8 +70,8 @@ function App() {
 
                 <NavigationMenu
     scrollToAbout={() => scrollToSection(aboutRef)}
-    scrollToAbout={() => scrollToSection(portfolioRef)}
-    scrollToAbout={() => scrollToSection(contactRef)}
+    scrollToPortfolio={() => scrollToSection(portfolioRef)}
+    scrollToContact={() => scrollToSection(contactRef)}
     />
 
 

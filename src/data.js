@@ -1,7 +1,8 @@
-import firstProjectImage from './imgs/first_project.png';
-import secondProjectImage from './imgs/second_project.png';
-import thirdProjectImage from './imgs/third_project.png';
+import firstProjectImage from './assets/imgs/first_project.png';
+import secondProjectImage from './assets/imgs/second_project.png';
+import thirdProjectImage from './assets/imgs/third_project.png';
 
+import johnDoe from './assets/imgs/john_doe.png';
 
 
 export const introdata = {
@@ -27,6 +28,21 @@ export const skills = {
 };
 
 
+export const feedbacks = [
+    {
+        author: 'John Doe',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum ligula, congue nec quam a, fermentum consectetur tortor.',
+        image: johnDoe,
+    },
+    {
+        author: 'Jane Smith',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum ligula, congue nec quam a, fermentum consectetur tortor.',
+        image: johnDoe,
+    }
+];
+
+
+
 export const projects = [
     {
         title: 'Vývoj webové stránky',
@@ -49,8 +65,25 @@ export const projects = [
 ];
 
 
-export const socials = {
-    email: "honzabehuncik@gmail.com",
-    github: "https://github.com/honzabehuncik",
-    instagram: "https://instagram.com/honza.behuncik"
-};
+export const socials = [
+    {
+        site: 'Email',
+        link: 'honzabehuncik@gmail.com',
+    },
+    {
+        site: 'GitHub',
+        link: 'https://github.com/honzabehuncik',
+    },
+    {
+        site: 'LinkedIn',
+        link: 'https://www.linkedin.com/in/honza-behuncik/',
+    },
+    {
+        site: 'Instagram',
+        link: 'https://instagram.com/honza.behuncik',
+    },
+    {
+        site: 'Threads',
+        link: 'https://www.threads.net/@honza.behuncik',
+    }
+];

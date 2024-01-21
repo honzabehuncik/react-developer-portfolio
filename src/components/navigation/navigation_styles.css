@@ -61,4 +61,13 @@
     .logo-text {
         font-size: 20px;
     }
+
+    .links a {
+        margin-left: 20px;
+        font-size: 15px;
+    }
+
+    .link-theme {
+        display: none;
+    }
 }
