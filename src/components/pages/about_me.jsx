@@ -19,7 +19,15 @@ function AboutMe() {
         <Container>
                 <section className="aboutme">
                     <h1 className="aboutme-title">O mně</h1>
-                    <p className="aboutme-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum ligula, congue nec quam a, fermentum consectetur tortor. Sed interdum laoreet viverra. Donec leo lorem, ullamcorper et eleifend a, interdum eu ex. Aliquam nec leo commodo, feugiat purus vel, hendrerit tortor. Nunc vel mauris vulputate diam maximus vulputate.</p>
+                    <p className="aboutme-description">
+                        Jsem student s vášní pro kódování a vývoj softwaru. Můj svět zahrnuje nejen webový vývoj s důrazem na frontend a backend, ale také grafický design.
+                    </p>
+                    <p className="aboutme-description">
+                        Mimo to jsem vášnivý kytarista. Kombinace vášně pro technologie a hudbu vytváří harmonii, kterou se snažím odrážet i ve svých projektech.
+                    </p>
+                    <p className="aboutme-description highlited_description">
+                        S láskou vytvářím digitální prostředí, které je nejen funkční, ale také vizuálně poutavé.
+                    </p>
                 </section>
                 <section className="skills">
                     <h1 className="skills-title">Mé skilly</h1>

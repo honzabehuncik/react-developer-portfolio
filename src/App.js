@@ -24,7 +24,6 @@ function App() {
     };
 
     return (
-
         <div>
             <div className="App">
                 <AnimatedCursor
@@ -61,6 +60,7 @@ function App() {
                 />
             </div>
     <Container>
+        <div className="custom-scrollbar"/>
 
                 <div className="light light-1"/>
                 <div className="light light-2"/>

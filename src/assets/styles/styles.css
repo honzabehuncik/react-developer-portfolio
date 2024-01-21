@@ -9,6 +9,24 @@
   --cursor-color: 224, 108, 117;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e06c75; /* Barva tlačítka scrollbaru */
+  border-radius: 10px;
+  transition: background-color 0.5s ease; /* Přidáno: přechod pro barvu */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #171717; /* Barva pozadí scrollbaru */
+  border-radius: 10px;
+}
+
+
+
+
 /* Globální styly */
 body {
   font-family: 'Overpass Mono', monospace !important;
@@ -75,6 +93,10 @@ body {
 }
 
 .light-theme .aboutme-title {
+  color: #BD93F9;
+}
+
+.light-theme .aboutme-description.highlited_description {
   color: #BD93F9;
 }
 
@@ -302,8 +324,6 @@ body {
 }
 
 
-
-
 .aboutme-title {
   color: #E06C75;
   font-weight: bold;
@@ -314,11 +334,16 @@ body {
 
 .aboutme-description {
   width: 800px;
-  height: 271px;
+  height: 100px;
   flex-shrink: 0;
   color: #ABB2BF;
   font-size: 1.4em;
   line-height: normal;
+}
+
+.aboutme-description.highlited_description {
+  color: #e06c75;
+  height: 141px;
 }
 
 .skills-title {

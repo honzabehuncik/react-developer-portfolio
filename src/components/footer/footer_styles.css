@@ -1,6 +1,5 @@
 /* Styly pro běžné obrazovky */
 .footer {
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -8,6 +7,7 @@
     padding-bottom: 30px;
     text-align: center;
     font-size: 1.2rem;
+    color: #ABB2BF;
     background: #1A1A1A;
     margin-bottom: 0 !important;
     border-radius: 53px;
