@@ -76,7 +76,7 @@ export const socials = [
     },
     {
         site: 'LinkedIn',
-        link: 'https://www.linkedin.com/in/honza-behuncik/',
+        link: 'https://www.linkedin.com/in/honza-behuncik',
     },
     {
         site: 'Instagram',

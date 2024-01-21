@@ -40,9 +40,9 @@ function Portfolio() {
                             </div>
                         ))}
                     </div>
-                    <p className="card-footer-text">
+                    <p className="card-footer-button">
                         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className="card-footer-text">
-                            A další!
+                            Zobrazit více
                         </a>
                     </p>
                 </section>
