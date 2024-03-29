@@ -1,10 +1,24 @@
 import React from 'react';
 import { Container, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import '../../assets/styles/styles.css';
 import { projects } from '../../data';
 
 function Portfolio() {
+    const notify = () => toast.warn('Detaily jednotlivých projektů budou brzy přidány.', {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+    });
+
+
     return (
         <div id="portfolio">
             <Container>
@@ -30,8 +44,8 @@ function Portfolio() {
                                             <div>
                                                 {project.technologies.map((tech, techIndex) => (
                                                     <span key={techIndex} className={`badge ${getColorForTechnology(tech)}`}>
-                            {tech}
-                          </span>
+                                                        {tech}
+                                                    </span>
                                                 ))}
                                             </div>
                                         </Card.Body>
@@ -41,17 +55,29 @@ function Portfolio() {
                         ))}
                     </div>
                     <p className="card-footer-button">
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className="card-footer-text">
+                        {/* Přidáme onClick událost, která spustí zobrazení toast zprávy */}
+                        <span className="card-footer-text" onClick={notify}>
                             Zobrazit více
-                        </a>
+                        </span>
                     </p>
                 </section>
+                <ToastContainer
+                    position="bottom-right"
+                    autoClose={3000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="colored"
+                />
             </Container>
         </div>
     );
 }
 
-// Function to determine badge color based on technology
 const getColorForTechnology = (technology) => {
     const colorMap = {
         react: 'badge-red',
@@ -59,8 +85,12 @@ const getColorForTechnology = (technology) => {
         express: 'badge-blue',
         redux: 'badge-purple',
         angular: 'badge-orange',
-        html: 'badge-blue',
-        css: 'badge-cyan',
+        html: 'badge-orange',
+        css: 'badge-blue',
+        figma: 'badge-purple',
+        php: 'badge-cyan',
+        mysql: 'badge-yellow',
+        photoshop: 'badge-green'
     };
 
     return colorMap[technology] || 'badge-default';

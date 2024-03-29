@@ -1,6 +1,6 @@
-import firstProjectImage from './assets/imgs/first_project.png';
+import firstProjectImage from './assets/imgs/first_project.jpg';
 import secondProjectImage from './assets/imgs/second_project.png';
-import thirdProjectImage from './assets/imgs/third_project.png';
+import thirdProjectImage from './assets/imgs/third_project.jpg';
 
 import johnDoe from './assets/imgs/john_doe.png';
 
@@ -18,14 +18,18 @@ export const focusData = [
 ];
 
 
-export const skills = {
-    html: "86%",
-    css: "82%",
-    sql: "70%",
-    react: "64%",
-    csharp: "58%",
-    php: "40%"
-};
+export const skills = [
+    { name: "HTML", value: "86%" },
+    { name: "CSS", value: "82%" },
+    { name: "SQL", value: "70%" },
+    { name: "React", value: "74%" },
+    { name: "C#", value: "58%" },
+    { name: "PHP", value: "40%" },
+    { name: "Premiere Pro", value: "63%" },
+    { name: "Photoshop", value: "72%" },
+    { name: "Next.js", value: "48%" }
+].sort((a, b) => parseFloat(b.value) - parseFloat(a.value));
+
 
 
 export const feedbacks = [
@@ -45,22 +49,22 @@ export const feedbacks = [
 
 export const projects = [
     {
-        title: 'Vývoj webové stránky',
-        description: 'Vývoj webové stránky',
+        title: 'UX/UI design',
+        description: 'Návrh UX/UI designu pro osobní portfolio',
         image: firstProjectImage,
-        technologies: ['html', 'css', 'react']
+        technologies: ['figma', 'photoshop']
     },
     {
-        title: 'Vývoj webové stránky',
-        description: 'Vývoj webové stránky',
+        title: 'Vývoj webové aplikace',
+        description: 'Backend a frontend vývoj webu pro kino',
         image: secondProjectImage,
-        technologies: ['html', 'css', 'node', 'redux']
+        technologies: ['php', 'css', 'mysql', 'figma']
     },
     {
-        title: 'Vývoj webové stránky',
-        description: 'Vývoj webové stránky',
+        title: 'Grafický design',
+        description: 'Grafický design plakátu na hudební akci',
         image: thirdProjectImage,
-        technologies: ['react', 'html', 'css']
+        technologies: ['photoshop']
     },
 ];
 

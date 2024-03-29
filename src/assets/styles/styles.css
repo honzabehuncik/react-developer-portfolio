@@ -1,4 +1,3 @@
-/* Resetování stylů */
 * {
   margin: 0;
   padding: 0;
@@ -14,33 +13,26 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #e06c75; /* Barva tlačítka scrollbaru */
+  background-color: #e06c75;
   border-radius: 10px;
-  transition: background-color 0.5s ease; /* Přidáno: přechod pro barvu */
+  transition: background-color 0.5s ease;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #171717; /* Barva pozadí scrollbaru */
+  background-color: #171717;
   border-radius: 10px;
 }
 
-
-
-
-/* Globální styly */
 body {
   font-family: 'Overpass Mono', monospace !important;
   background-color: #171717 !important;
   color: #ABB2BF !important;
 }
 
-
-/* Světlé téma */
 .light-theme {
   color: #BD93F9 !important;
 }
 
-/* Tmavé téma */
 .dark-theme {
   color: #ABB2BF !important;
 }
@@ -161,41 +153,36 @@ body {
   transition: color 0.5s ease;
 }
 
-
-/* Původní styly pro body a ostatní globální styly */
-
-/* Kontejner pro efekt glassmorphismu */
 .background-effects {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Posunutí pod obsah stránky */
-  background-color: rgba(40, 44, 52, 0.4); /* Barva s průhledností pro efekt */
+  z-index: -1;
+  background-color: rgba(40, 44, 52, 0.4);
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Vytvoření trojúhelníků pro svítící vzory s větším rozmazáním a "glow" efektem */
 .background-effects::before {
   content: "";
   position: absolute;
-  width: 200px; /* Velikost kolečka */
-  height: 200px; /* Velikost kolečka */
-  border-radius: 50%; /* Kruhový tvar */
-  opacity: 0.6; /* Průhlednost svítících koleček */
-  filter: blur(80px); /* Větší rozmazání */
-  box-shadow: 0 0 20px 10px #E06C75; /* "Glow" efekt */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  opacity: 0.6;
+  filter: blur(80px);
+  box-shadow: 0 0 20px 10px #E06C75;
 }
 
 .background-effects::before {
-  top: 50%; /* Umístění kolečka uprostřed vertikálně */
-  left: 80%; /* Umístění kolečka uprostřed horizontálně */
-  transform: translate(-50%, -50%); /* Posunutí kolečka zpět o polovinu jeho vlastní velikosti */
-  background: #E06C75; /* Barva kolečka */
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  background: #E06C75;
 }
 
 
@@ -245,26 +232,22 @@ body {
   animation: flashing-1 10s infinite;
 }
 
-/* Ostatní styly pro obsah stránky */
 .content {
   position: relative;
-  z-index: 1; /* Posunutí nad kontejner s efektem */
-  /* Další styly podle potřeby */
+  z-index: 1;
 }
-
-
 
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 17% 0 20%;
-  box-sizing: border-box; /* Přidáno pravidlo box-sizing */
+  box-sizing: border-box;
 }
 
 .hero-content {
   flex: 1;
-  box-sizing: border-box; /* Přidáno pravidlo box-sizing */
+  box-sizing: border-box;
 }
 
 .hero-title {
@@ -274,7 +257,7 @@ body {
   color: #E06C75;
   text-align: left;
   font-family: 'Montserrat', sans-serif;
-  box-sizing: border-box; /* Přidáno pravidlo box-sizing */
+  box-sizing: border-box;
 }
 
 .hero-description {
@@ -282,7 +265,7 @@ body {
   text-align: left;
   margin-bottom: 20%;
   line-height: normal;
-  box-sizing: border-box; /* Přidáno pravidlo box-sizing */
+  box-sizing: border-box;
 }
 
 .highlighted {
@@ -364,7 +347,7 @@ body {
 }
 
 .skills {
-  height: 491px;
+  height: 610px;
 }
 
 .skill {
@@ -374,7 +357,7 @@ body {
 
 .skill-name {
   display: inline-block;
-  width: 80px;
+  width: 250px;
   color: #ABB2BF;
   font-size: 1.4rem;
 }
@@ -383,7 +366,7 @@ body {
   width: 80px;
   color: #ABB2BF;
   font-size: 1.4rem;
-  margin-left: 583px;
+  margin-left: 412px;
   text-align: right;
 }
 
@@ -431,32 +414,26 @@ body {
   margin-bottom: 2%;
 }
 
-/* Styly pro prvni feedback */
 .first-feedback {
   display: flex;
   align-items: center;
 }
 
-/* Styly pro sekci feedback */
 .feedback {
   display: flex;
-  flex-direction: column; /* Uspořádání ve sloupci pro nadpis a obsah */
-  align-items: flex-start; /* Zarovnání obsahu vlevo */
+  flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 20px;
-  text-align: left; /* Zarovnání textu vlevo */
+  text-align: left;
   height: 571px;
 }
 
-
-
-/* Styly pro prvni feedback */
 .first-feedback {
   display: flex;
   align-items: center;
   margin-bottom: 50px;
 }
 
-/* Styly pro obrázek */
 .feedback-img {
   width: 120px;
   height: 120px;
@@ -466,19 +443,17 @@ body {
   background-color: lightgray;
   background-size: cover;
   background-position: center center;
-  margin-right: 20px; /* Vzdálenost mezi obrázkem a textem */
-  align-self: flex-start; /* Zarovnání obrázku k hornímu okraji */
+  margin-right: 20px;
+  align-self: flex-start;
 }
 
-/* Styly pro popisek */
 .feedback-description {
   width: 800px;
   font-size: 1.4em;
   line-height: normal;
-  text-align: left; /* Zarovnání textu vlevo */
+  text-align: left;
 }
 
-/* Styly pro nadpis a odstavec uvnitř popisku */
 .feedback-description h3 {
   margin-top: 0;
   font-size: 1.3em;
@@ -486,37 +461,6 @@ body {
   color: #E06C75;
   font-family: 'Montserrat', sans-serif;
 }
-
-
-  .gradient-container {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(225deg, #32C5FF 0%, #B620E0 51%, #F7B500 100%);
-    background-size: 200% 100%;
-    -webkit-animation: animateGradient 2s linear infinite;
-    -moz-animation: animateGradient 2s linear infinite;
-    -o-animation: animateGradient 2s linear infinite;
-    animation: animateGradient 2s linear infinite;
-  }
-
-  @keyframes animateGradient {
-    0% {
-      background-position: 0 50%
-    }
-
-    50% {
-      background-position: 100% 50%
-    }
-
-    100% {
-      background-position: 0 50%
-    }
-  }
-
 
 
 .portfolio-title {
@@ -542,7 +486,7 @@ body {
   margin-bottom: 30px;
   background: none !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* Zajištění, aby se obrázek nevysunul mimo rámeček karty */
+  overflow: hidden;
 }
 
 .card-header {
@@ -577,7 +521,6 @@ body {
 .card-text {
   color: #FFFFFF;
 }
-
 
 .card-footer-button {
   text-align: center;
@@ -645,8 +588,6 @@ body {
   border-color: #C678DD;
 }
 
-
-
 .contact {
   height: 450px;
 }
@@ -689,7 +630,7 @@ body {
 
 @media (max-width: 1200px) {
   .hero-image img {
-    display: none; /* Skryje obrázek při šířce obrazovky do 1200px */
+    display: none;
   }
 
   .hero-description {

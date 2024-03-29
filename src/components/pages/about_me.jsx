@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../../assets/styles/styles.css';
 import { Container } from 'react-bootstrap';
-import { skills, feedbacks } from '../../data';
+import { skills } from '../../data';
 
 function AboutMe() {
-    const [isDarkTheme] = useState(true); // Stav pro sledování aktuálního tématu
+    const [isDarkTheme] = useState(true);
     const progressBarRefs = useRef([]);
 
     useEffect(() => {
@@ -29,54 +29,21 @@ function AboutMe() {
                         S láskou vytvářím digitální prostředí, které je nejen funkční, ale také vizuálně poutavé.
                     </p>
                 </section>
-                <section className="skills">
-                    <h1 className="skills-title">Mé skilly</h1>
-                    <div className="skill-bar">
-                        <div className="skill">
-                            <span className="skill-name">HTML:</span>
-                            <span className="skill-percent">{skills.html}</span>
+            <section className="skills">
+                <h1 className="skills-title">Mé dovednosti</h1>
+                <div className="skill-bar">
+                    {skills.map((skill, index) => (
+                        <div className="skill" key={index}>
+                            <span className="skill-name">{skill.name}:</span>
+                            <span className="skill-percent">{skill.value}</span>
                             <div className="skill-progress">
-                                <div className="progress" style={{'--skill-width': skills.html}}/>
+                                <div className="progress" style={{ '--skill-width': skill.value }} />
                             </div>
                         </div>
-                        <div className="skill">
-                            <span className="skill-name">CSS:</span>
-                            <span className="skill-percent">{skills.css}</span>
-                            <div className="skill-progress">
-                                <div className="progress" style={{'--skill-width': skills.css}}/>
-                            </div>
-                        </div>
-                        <div className="skill">
-                            <span className="skill-name">SQL:</span>
-                            <span className="skill-percent">{skills.sql}</span>
-                            <div className="skill-progress">
-                                <div className="progress" style={{'--skill-width': skills.sql}}/>
-                            </div>
-                        </div>
-                        <div className="skill">
-                            <span className="skill-name">React:</span>
-                            <span className="skill-percent">{skills.react}</span>
-                            <div className="skill-progress">
-                                <div className="progress" style={{'--skill-width': skills.react}}/>
-                            </div>
-                        </div>
-                        <div className="skill">
-                            <span className="skill-name">C#:</span>
-                            <span className="skill-percent">{skills.csharp}</span>
-                            <div className="skill-progress">
-                                <div className="progress" style={{'--skill-width': skills.csharp}}/>
-                            </div>
-                        </div>
-                        <div className="skill">
-                            <span className="skill-name">PHP:</span>
-                            <span className="skill-percent">{skills.php}</span>
-                            <div className="skill-progress">
-                                <div className="progress" style={{'--skill-width': skills.php}}/>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            <section className="feedback">
+                    ))}
+                </div>
+            </section>
+            {/*<section className="feedback">
                 <Container>
                     <h1 className="feedback-title">Reference</h1>
                     {feedbacks.map((feedback, index) => (
@@ -89,7 +56,7 @@ function AboutMe() {
                         </div>
                     ))}
                 </Container>
-            </section>
+            </section>*/}
             </Container>
         </div>
     );

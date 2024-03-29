@@ -31,9 +31,13 @@ function NavigationMenu() {
                 <span className="logo-text">Honza Běhunčík</span>
             </div>
             <div className="links">
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                 <a onClick={() => scrollToSection('about')}>O mně</a>
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                 <a onClick={() => scrollToSection('portfolio')}>Portfolio</a>
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                 <a onClick={() => scrollToSection('contact')}>Kontakt</a>
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                 <a className="link-theme" onClick={toggleTheme}>
                     Změnit theme
                 </a>

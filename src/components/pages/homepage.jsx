@@ -3,7 +3,7 @@ import '../../assets/styles/styles.css';
 import { Container } from 'react-bootstrap';
 import { TypeAnimation } from 'react-type-animation';
 import { introdata, focusData } from '../../data';
-import heroImage from '../../assets/imgs/me.jpg'; // Upravte cestu k obrázku
+import heroImage from '../../assets/imgs/me.jpg';
 
 function Homepage() {
     const focusSequence = [
